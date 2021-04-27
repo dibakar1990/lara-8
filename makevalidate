@@ -1,0 +1,13 @@
+make validate with category and sub category uniquie check
+
+ $rules = [
+                //'category_name' => 'required',
+                // 'category_name' => [
+                //     'required',
+                //     Rule::unique('categories')->ignore($id)->where(function ($query) use($input) {
+                //         return $query->where('parent_id', $input['parent_id']);
+                //     }),
+                // ],
+                //'category_name' => 'required|max:200|unique:categories,category_name,' . $id . ',id,'.$parent_id.',parent_id,deleted_at,NULL',
+                'category_name' =>'required|max:200|unique:categories,category_name,' . $id . ',id,parent_id,'.$parent_id.',deleted_at,NULL',
+            ];
