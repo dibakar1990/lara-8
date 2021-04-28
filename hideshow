@@ -1,0 +1,22 @@
+@if($val->status == 'Inactive')
+  @php($hide_show = 'd-none')
+@else
+  @php($hide_show = '')
+@endif
+
+  <a href="your route" class="{{ $hide_show }}" id="add_remove_{{ $val->id }}"><i class="fas fa-edit"></i></a>
+
+
+<style>
+  .d-none{
+    display:none;
+  }
+</style>
+
+//ajax document ready funtion
+
+if('your respone condition'){
+    $("#add_remove_"+id).removeClass("d-none");
+}else{
+    $("#add_remove_"+id).addClass("d-none");
+}
